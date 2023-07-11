@@ -1,0 +1,33 @@
+#+TITLE: libluna-qs
+
+[[https://img.shields.io/gitlab/v/release/lunamw/libluna-qs-parser]]
+[[https://img.shields.io/gitlab/license/lunamw/libluna-qs-parser]]
+[[https://img.shields.io/gitlab/last-commit/lunamw/libluna-qs-parser]]
+
+** Español
+Implementación de la sintaxis de QuickStatements, creada por Magnus Manske, con algunas mejoras. luna-qs devuelve una estructura que puede ser usada desde cualquier otro programa.
+
+** English
+C parser for Magnus Manske's QuickStatements syntax, with some additions. luna-qs returns a structure that can be used from any other program.
+
+*** Features
+V1 syntax is completely supported. Also, QS extended syntax can:
+
+- Set alias for newly created items: it would be possible link to newly created elements * Set ranks for statements
+- Set a comment when removing statements
+- Specify a calendar for date statements
+- Specify a precision for location statements
+- Follow redirections
+- Support statements with same property=value but different qualifiers
+- Removing qualifiers only
+- Removing references only
+- Removing aliases
+- Set and update badges
+- Create lexemes too (using =CREATELEX=)
+
+--------------
+
+- Support for useful extensions (with -n)
+- Defaults to Julian calendar for dates before 5 October 1582 ([[https://github.com/magnusmanske/quickstatements/issues/11][#11]])
+- Checks constraints on created or modified claims ([[https://github.com/magnusmanske/quickstatements/issues/21][#21]])
+- Support to EDTF dates (with -edtf) ([[https://github.com/magnusmanske/quickstatements/issues/26][#26]])
